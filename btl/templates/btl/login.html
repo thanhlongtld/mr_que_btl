@@ -100,7 +100,7 @@
             <div class="col-xl-6 col-lg-7">
                 <nav class="header__menu">
                     <ul>
-                        <li class="active"><a href="./">Home</a></li>
+                        <li><a href="./">Home</a></li>
                         <li><a href="#">Women’s</a></li>
                         <li><a href="#">Men’s</a></li>
                         <li><a href="#">Shop</a></li>
@@ -164,9 +164,10 @@
                 <div class="contact__content">
                     <div class="contact__form">
                         <h5>Login</h5>
-                        <form action="#">
-                            <input type="text" placeholder="Username">
-                            <input type="password" placeholder="Password">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <input type="text" placeholder="Username" name="username">
+                            <input type="password" placeholder="Password" name="password">
 
                             <button type="submit" class="site-btn">Login</button>
                         </form>
